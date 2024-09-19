@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/basic-http/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/basic-http/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/basic-http",
+  "projects": {
+    "basic-http": {
+      "type": "application",
+      "root": "apps/basic-http",
+      "entryFile": "main",
+      "sourceRoot": "apps/basic-http/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/basic-http/tsconfig.app.json"
+      }
+    },
+    "dynamic-http": {
+      "type": "application",
+      "root": "apps/dynamic-http",
+      "entryFile": "main",
+      "sourceRoot": "apps/dynamic-http/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/dynamic-http/tsconfig.app.json"
+      }
+    }
+  }
+}
