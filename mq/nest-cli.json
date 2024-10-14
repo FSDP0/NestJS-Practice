@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/mqtt/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/mqtt/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/mqtt",
+  "projects": {
+    "mqtt": {
+      "type": "application",
+      "root": "apps/mqtt",
+      "entryFile": "main",
+      "sourceRoot": "apps/mqtt/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/mqtt/tsconfig.app.json"
+      }
+    }
+  }
+}
