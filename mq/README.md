@@ -5,7 +5,7 @@ Messaging Queue 관련 예시 프로젝트 입니다.
  * TCP (예정)
  * MQTT
  * AMQP
- * KAFKA (예정)
+ * KAFKA
 
 ### 실행 방법
 ```bash
