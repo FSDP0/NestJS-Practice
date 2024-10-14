@@ -18,6 +18,15 @@
       "compilerOptions": {
         "tsConfigPath": "apps/mqtt/tsconfig.app.json"
       }
+    },
+    "amqp": {
+      "type": "application",
+      "root": "apps/amqp",
+      "entryFile": "main",
+      "sourceRoot": "apps/amqp/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/amqp/tsconfig.app.json"
+      }
     }
   }
 }

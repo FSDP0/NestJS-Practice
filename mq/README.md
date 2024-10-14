@@ -4,7 +4,7 @@ Messaging Queue 관련 예시 프로젝트 입니다.
 ### 적용 기술 목록
  * TCP (예정)
  * MQTT
- * AMQP (예정)
+ * AMQP
  * KAFKA (예정)
 
 ### 실행 방법
