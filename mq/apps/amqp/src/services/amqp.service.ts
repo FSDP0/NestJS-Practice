@@ -6,22 +6,22 @@ export class AmqpService implements OnModuleInit, OnModuleDestroy {
   constructor(@Inject("AMQP_SVC") private readonly amqpClient: ClientRMQ) {}
 
   public async sum(values: number[]) {
-    this.amqpClient.emit("sum", { values });
+    this.amqpClient.send("sum", { values }).subscribe();
   }
 
   public async min(values: number[]) {
-    this.amqpClient.emit("min", { values });
+    this.amqpClient.send("min", { values }).subscribe();
   }
 
   public async max(values: number[]) {
-    this.amqpClient.emit("max", { values });
+    this.amqpClient.send("max", { values }).subscribe();
   }
 
   async onModuleInit() {
     await this.amqpClient.connect();
   }
 
-  onModuleDestroy() {
+  async onModuleDestroy() {
     this.amqpClient.close();
   }
 }
